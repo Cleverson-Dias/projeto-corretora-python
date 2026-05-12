@@ -1,4 +1,4 @@
-# =============== CORRETORA.PY ================
+# =============== CORRETORRA PYTHON ================
 
 import customtkinter as ctk               # Importa a biblioteca customtkinter para criar a interface gráfica
 
@@ -43,8 +43,7 @@ ctk.CTkLabel(
     text_color="gray"
 ).pack(pady=(0, 16))
 
-# Campo de usuário
-entry_user = ctk.CTkEntry(
+entry_user = ctk.CTkEntry(                        # Campo de usuário
     frame_login,
     placeholder_text="Usuário",                    # Texto exibido quando vazio
     width=260,
@@ -52,20 +51,19 @@ entry_user = ctk.CTkEntry(
 )
 entry_user.pack(pady=8)
 
-# Campo de senha (oculta os caracteres com *)
-entry_pass = ctk.CTkEntry(
+                               
+entry_pass = ctk.CTkEntry(                        #cria o campo de senha
     frame_login,
     placeholder_text="Senha",
     show="*",                                      # Substitui caracteres por "*"
     width=260,
     height=40
 )
-entry_pass.pack(pady=8)
+entry_pass.pack(pady=8)                            # Posiciona o campo de senha
 
 
-label_erro = ctk.CTkLabel(
-    frame_login,                                          # Label de erro (começa vazia)
-    text="",
+label_erro = ctk.CTkLabel(                       # Label para exibir mensagens de erro
+    frame_login,                                          
     font=ctk.CTkFont(size=12)
 )
 label_erro.pack(pady=(4, 0))
